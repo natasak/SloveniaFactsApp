@@ -3,9 +3,65 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#689F38</item>
+        <item name="colorPrimaryDark">#33691E</item>
+        <item name="colorAccent">#8BC34A</item>
+        <item name="colorButtonNormal">#8BC34A</item>
+    </style>
+
+    <!-- Style for a Header -->
+    <style name="HeaderStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#689F38</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for a TextView questions -->
+    <style name="QuestionsTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">#689F38</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Style for a Radio Buttons and Checkbox -->
+    <style name="SelectionStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Style for a Button -->
+    <style name="ButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Style for a TextView questions -->
+    <style name="RatingStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">#689F38</item>
     </style>
 
 </resources>

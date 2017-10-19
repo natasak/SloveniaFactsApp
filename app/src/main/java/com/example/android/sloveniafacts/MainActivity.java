@@ -11,6 +11,13 @@ import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+/**
+ * SOURCE of the header image:
+ * http://www.diplomatic-corporate-services.si/uploads/diplomatic-corporate-services.si_dev/slovenia1.jpg
+ * 19th october 2017
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     int result = 0;
@@ -210,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
         rate();
 
         //display toast of results via toast
-        Toast.makeText(this, "SCORE: " + result, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "SCORE: " + result + " / 7", Toast.LENGTH_LONG).show();
 
         //after display set result to 0, so you can change your selections and get another score
         result = 0;
