@@ -1,5 +1,7 @@
 package com.example.android.sloveniafacts;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -219,6 +221,38 @@ public class MainActivity extends AppCompatActivity {
      */
     public void sendEmail(View view) {
         //make a summary of answers and send via email app
+        String subject = "Answers of the quiz SloveniaFacts";
+        String answers = createAnswers();
+        composeEmail(subject, answers);
+
+    }
+
+    /**
+     * Method for displaying the answers.
+     */
+    public String createAnswers() {
+        String answers = "1. Europe";
+        answers += "\n" + "2. Ljubljana";
+        answers += "\n" + "3. 2 million";
+        answers += "\n" + "4. Sea, Alps, Caves";
+        answers += "\n" + "5. 60 %";
+        answers += "\n" + "6. Summer (lets find a shadow hot), Autumn, Winter (with snow), Spring";
+        answers += "\n" + "7. Potica, Žlinkrofi, Carniolan Sausage";
+        return answers;
+
+    }
+
+    /**
+     * This method opens the email app and display subject and order summary.
+     */
+    public void composeEmail(String subject, String text) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
