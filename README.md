@@ -15,5 +15,5 @@ Screenshots
 
 | The beginning of the app | The end of the app |
 | ------------------------ | ------------------ |
-| ![app's UI](https://github.com/natasak/CoffeeOrderingApp/blob/master/screenshots/english.png) | ![order summary](https://github.com/natasak/CoffeeOrderingApp/blob/master/screenshots/compose_email.png) |
+| ![Beginning](https://github.com/natasak/SloveniaFactsApp/blob/master/screenshots/screenshot_1.png) | ![End](https://github.com/natasak/SloveniaFactsApp/blob/master/screenshots/screenshot_2.png) |
 
