@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -204,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
         onRadioButtonForest();
         onRadioButtonSeasons();
         onCheckBoxFood();
+        rate();
 
         //display toast of results via toast
         Toast.makeText(this, "SCORE: " + result, Toast.LENGTH_LONG).show();
@@ -217,6 +219,18 @@ public class MainActivity extends AppCompatActivity {
      */
     public void sendEmail(View view) {
         //make a summary of answers and send via email app
+    }
+
+    /**
+     * Method for selecting the number of stars - RatingBar.
+     */
+    public String rate() {
+        // initiate rating bar
+        RatingBar simpleRatingBar = (RatingBar) findViewById(R.id.rating_bar);
+
+        // get values
+        String rating = "Rating : " + simpleRatingBar.getRating();
+        return rating;
     }
 
 
