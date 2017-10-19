@@ -129,7 +129,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5. How much forests does SLovenia have?" />
+            android:text="5. How much forests does Slovenia have?" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:text="30 %" />
             <RadioButton
-                android:id="@+id/forest50_radio_button"
+                android:id="@+id/forest60_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="60 %" />
