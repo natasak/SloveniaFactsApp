@@ -231,13 +231,22 @@ public class MainActivity extends AppCompatActivity {
      * Method for displaying the answers.
      */
     public String createAnswers() {
-        String answers = "1. Europe";
+        String answers = "Correct answers are:";
+        answers += "\n" + "1. Europe";
         answers += "\n" + "2. Ljubljana";
         answers += "\n" + "3. 2 million";
         answers += "\n" + "4. Sea, Alps, Caves";
         answers += "\n" + "5. 60 %";
         answers += "\n" + "6. Summer (lets find a shadow hot), Autumn, Winter (with snow), Spring";
         answers += "\n" + "7. Potica, Žlinkrofi, Carniolan Sausage";
+        answers += "\n";
+        if (rate() > 4) {
+            answers += "\n" + "You rated the app with: " + rate() + " stars. Thanks for believing in me!";
+        } else if (rate() < 3) {
+            answers += "\n" + "You rated the app with: " + rate() + " stars. I don't think it is thaaaat bad :(";
+        } else {
+            answers += "\n" + "You rated the app with: " + rate() + " stars. Yeah, it could use some improvements.";
+        }
         return answers;
 
     }
@@ -258,12 +267,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Method for selecting the number of stars - RatingBar.
      */
-    public String rate() {
+    public int rate() {
         // initiate rating bar
         RatingBar simpleRatingBar = (RatingBar) findViewById(R.id.rating_bar);
 
         // get values
-        String rating = "Rating : " + simpleRatingBar.getRating();
+        int rating = (int)simpleRatingBar.getRating();
         return rating;
     }
 
