@@ -7,7 +7,8 @@ Simple Android Quiz App about Slovenia at Udacity's "Android Basics" series.
 Style and theme
 ---------------
 
-Light green color palette as "I feel Slovenia" brand. Header picture source: 
+Light green color palette as "I feel Slovenia" brand. Header picture source: http://www.diplomatic-corporate-services.si/uploads/diplomatic-corporate-services.si_dev/slovenia1.jpg
+
 
 
 Screenshots
