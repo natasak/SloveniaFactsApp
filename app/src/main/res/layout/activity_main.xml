@@ -22,11 +22,11 @@
 
         <TextView
             style="@style/HeaderStyle"
-            android:text="How well do you know the country of Slovenia? Answer questions below and find out!"/>
+            android:text="@string/introduction"/>
 
         <TextView
             style="@style/QuestionsTextStyle"
-            android:text="1. Where is Slovenia?"/>
+            android:text="@string/q1"/>
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -35,31 +35,31 @@
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/asia_radio_button"
-                android:text="Asia" />
+                android:text="@string/a1_radio_a" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/europe_radio_button"
-                android:text="Europe" />
+                android:text="@string/a1_radio_b" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/south_america_radio_button"
-                android:text="South America" />
+                android:text="@string/a1_radio_c" />
         </RadioGroup>
 
         <TextView
             style="@style/QuestionsTextStyle"
-            android:text="2. Name the Slovenia's Capital."/>
+            android:text="@string/q2"/>
 
         <EditText
             android:id="@+id/capital_name_field"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:hint="Write the Capital"
+            android:hint="@string/a2_input_capital"
             android:inputType="textCapWords"/>
 
         <TextView
             style="@style/QuestionsTextStyle"
-            android:text="3. How big is the population (in million)?" />
+            android:text="@string/q3" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -68,49 +68,49 @@
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/mio2_radio_button"
-                android:text="2m" />
+                android:text="@string/a3_radio_a" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/mio5_radio_button"
-                android:text="5m" />
+                android:text="@string/a3_radio_b" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/mio10_radio_button"
-                android:text="10m" />
+                android:text="@string/a3_radio_c" />
         </RadioGroup>
 
         <TextView
             style="@style/QuestionsTextStyle"
-            android:text="4. What do you find in Slovenia? Select all that apply." />
+            android:text="@string/q4" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/sea_checkbox"
-            android:text="Sea" />
+            android:text="@string/a4_chk_a" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/desert_checkbox"
-            android:text="Desert" />
+            android:text="@string/a4_chk_b" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/alps_checkbox"
-            android:text="Alps" />
+            android:text="@string/a4_chk_c" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/jungle_checkbox"
-            android:text="Jungle" />
+            android:text="@string/a4_chk_d" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/caves_checkbox"
-            android:text="Caves" />
+            android:text="@string/a4_chk_e" />
 
         <TextView
             style="@style/QuestionsTextStyle"
-            android:text="5. How much forests does Slovenia have?" />
+            android:text="@string/q5" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -119,19 +119,19 @@
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/forest10_radio_button"
-                android:text="10 %" />
+                android:text="@string/a5_radio_a" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/forest30_radio_button"
-                android:text="30 %" />
+                android:text="@string/a5_radio_b" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/forest60_radio_button"
-                android:text="60 %" />
+                android:text="@string/a5_radio_c" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/forest80_radio_button"
-                android:text="80 %" />
+                android:text="@string/a5_radio_d" />
         </RadioGroup>
 
         <TextView
@@ -145,63 +145,63 @@
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/summer_radio_button"
-                android:text="Summer all year" />
+                android:text="@string/a6_radio_a" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/seasons_hot_radio_button"
-                android:text="Summer (too hot to work), Autumn, Winter (no snow), Spring" />
+                android:text="@string/a6_radio_b" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/seasons_normal_radio_button"
-                android:text="Summer (lets find a shadow hot), Autumn, Winter (with snow), Spring" />
+                android:text="@string/a6_radio_c" />
             <RadioButton
                 style="@style/SelectionStyle"
                 android:id="@+id/winter_radio_button"
-                android:text="Winter all year" />
+                android:text="@string/a6_radio_d" />
         </RadioGroup>
 
         <TextView
             style="@style/QuestionsTextStyle"
-            android:text="7. What dishes do you definetly want to try in Slovenia?" />
+            android:text="@string/q7" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/potica_checkbox"
-            android:text="Potica" />
+            android:text="@string/a7_chk_a" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/pizza_checkbox"
-            android:text="Pizza" />
+            android:text="@string/a7_chk_b" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/cepelinai_checkbox"
-            android:text="Cepelinai" />
+            android:text="@string/a7_chk_c" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/zlinkrofi_checkbox"
-            android:text="Žlinkrofi" />
+            android:text="@string/a7_chk_d" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/carniolan_sausage_checkbox"
-            android:text="Carniolan Sausage" />
+            android:text="@string/a7_chk_e" />
 
         <CheckBox
             style="@style/SelectionStyle"
             android:id="@+id/borscht_checkbox"
-            android:text="Borscht" />
+            android:text="@string/a7_chk_f" />
 
         <Button
             style="@style/ButtonStyle"
             android:onClick="seeResults"
-            android:text="See results!" />
+            android:text="@string/results" />
 
         <TextView
             style="@style/RatingStyle"
-            android:text="How would you rate this app?"
+            android:text="@string/rate"
             android:gravity="center"/>
 
         <RatingBar
@@ -215,6 +215,6 @@
         <Button
             style="@style/ButtonStyle"
             android:onClick="sendEmail"
-            android:text="Send the answers to my email!" />
+            android:text="@string/email" />
     </LinearLayout>
 </ScrollView>

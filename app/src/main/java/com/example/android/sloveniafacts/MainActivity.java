@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
         rate();
 
         //display toast of results via toast
-        Toast.makeText(this, "SCORE: " + result + " / 7", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.score) + result + getString(R.string.of7), Toast.LENGTH_LONG).show();
 
         //after display set result to 0, so you can change your selections and get another score
         result = 0;
@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void sendEmail(View view) {
         //make a summary of answers and send via email app
-        String subject = "Answers of the quiz SloveniaFacts";
+        String subject = getString(R.string.emailSubject);
         String answers = createAnswers();
         composeEmail(subject, answers);
 
@@ -238,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
      * Method for displaying the answers.
      */
     public String createAnswers() {
-        String answers = "Correct answers are:";
+        String answers = getString(R.string.answersHeader);
         answers += "\n" + "1. Europe";
         answers += "\n" + "2. Ljubljana";
         answers += "\n" + "3. 2 million";
@@ -248,11 +248,11 @@ public class MainActivity extends AppCompatActivity {
         answers += "\n" + "7. Potica, Žlinkrofi, Carniolan Sausage";
         answers += "\n";
         if (rate() > 4) {
-            answers += "\n" + "You rated the app with: " + rate() + " stars. Thanks for believing in me!";
+            answers += "\n" + getString(R.string.ratedText) + rate() + getString(R.string.ratedHigh);
         } else if (rate() < 3) {
-            answers += "\n" + "You rated the app with: " + rate() + " stars. I don't think it is thaaaat bad :(";
+            answers += "\n" + getString(R.string.ratedText) + rate() + getString(R.string.ratedLow);
         } else {
-            answers += "\n" + "You rated the app with: " + rate() + " stars. Yeah, it could use some improvements.";
+            answers += "\n" + getString(R.string.ratedText) + rate() + getString(R.string.ratedMiddle);
         }
         return answers;
 

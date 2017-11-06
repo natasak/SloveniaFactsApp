@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">Slovenia Facts</string>
+
+    <!-- from XML file, headers and buttons -->
+    <string name="introduction">How well do you know the country of Slovenia? Answer questions below and find out!</string>
+    <string name="results">See results!</string>
+    <string name="rate">How would you rate this app?</string>
+    <string name="email">Send the answers to my email!</string>
+
+    <!-- from XML file, questions and answers -->
+    <string name="q1">1. Where is Slovenia?</string>
+    <string name="a1_radio_a">Asia</string>
+    <string name="a1_radio_b">Europe</string>
+    <string name="a1_radio_c">South America</string>
+    <string name="q2">2. Name the Slovenia\'s Capital.</string>
+    <string name="a2_input_capital">Write the Capital</string>
+    <string name="q3">3. How big is the population (in million)?</string>
+    <string name="a3_radio_a">2m</string>
+    <string name="a3_radio_b">5m</string>
+    <string name="a3_radio_c">10m</string>
+    <string name="q4">4. What do you find in Slovenia? Select all that apply.</string>
+    <string name="a4_chk_a">Sea</string>
+    <string name="a4_chk_b">Desert</string>
+    <string name="a4_chk_c">Alps</string>
+    <string name="a4_chk_d">Jungle</string>
+    <string name="a4_chk_e">Caves</string>
+    <string name="q5">5. How much forests does Slovenia have?</string>
+    <string name="a5_radio_a">10 %</string>
+    <string name="a5_radio_b">30 %</string>
+    <string name="a5_radio_c">60 %</string>
+    <string name="a5_radio_d">80 %</string>
+    <string name="q6">6. What seasons does Slovenia have?</string>
+    <string name="a6_radio_a">Summer all year</string>
+    <string name="a6_radio_b">Summer (too hot to work), Autumn, Winter (no snow), Spring</string>
+    <string name="a6_radio_c">Summer (lets find a shadow hot), Autumn, Winter (with snow), Spring</string>
+    <string name="a6_radio_d">Winter all year</string>
+    <string name="q7">7. What dishes do you definetly want to try in Slovenia?</string>
+    <string name="a7_chk_a">Potica</string>
+    <string name="a7_chk_b">Pizza</string>
+    <string name="a7_chk_c">Cepelinai</string>
+    <string name="a7_chk_d">Žlinkrofi</string>
+    <string name="a7_chk_e">Carniolan Sausage</string>
+    <string name="a7_chk_f">Borscht</string>
+
+    <!-- from .java file, displayed text -->
+    <string name="score">SCORE: </string>
+    <string name="of7"> / 7</string>
+    <string name="emailSubject">Answers of the quiz SloveniaFacts</string>
+    <string name="answersHeader">Correct answers are:</string>
+    <string name="ratedText">You rated the app with: </string>
+    <string name="ratedHigh"> stars. Thanks for believing in me!</string>
+    <string name="ratedLow"> stars. I don\'t think it is thaaaat bad :(</string>
+    <string name="ratedMiddle"> stars. Yeah, it could use some improvements.</string>
 </resources>
