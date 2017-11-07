@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //initialize all the view variables here:
+        /**
+         * Initialize all view variables
+         */
+
         // initialize rating bar view
         simpleRatingBar = (RatingBar) findViewById(R.id.rating_bar);
 
@@ -237,11 +240,10 @@ public class MainActivity extends AppCompatActivity {
         answers += "\n" + "1. " + getString(R.string.a1_radio_b);
         answers += "\n" + "2. " + getString(R.string.a2_ljubljana);
         answers += "\n" + "3. " + getString(R.string.a3_radio_a_correct);
-        answers += "\n" + "4. " + getString(R.string.a4_chk_a) + getString(R.string.a4_chk_c) + getString(R.string.a4_chk_e);
+        answers += "\n" + "4. " + getString(R.string.a4_correct);
         answers += "\n" + "5. " + getString(R.string.a5_radio_c);
         answers += "\n" + "6. " + getString(R.string.a6_radio_c);
-        // Potica, Žlinkrofi, Carniolan Sausage
-        answers += "\n" + "7. " + getString(R.string.a7_chk_a) + getString(R.string.a7_chk_d) + getString(R.string.a7_chk_e);
+        answers += "\n" + "7. " + getString(R.string.a7_correct);
         answers += "\n";
         if (rate() > 4) {
             answers += "\n" + getString(R.string.ratedText) + rate() + getString(R.string.ratedHigh);
@@ -274,6 +276,4 @@ public class MainActivity extends AppCompatActivity {
         // get values
         return (int)simpleRatingBar.getRating();
     }
-
-
 }

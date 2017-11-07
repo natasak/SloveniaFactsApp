@@ -26,6 +26,7 @@
     <string name="a4_chk_c">Alps</string>
     <string name="a4_chk_d">Jungle</string>
     <string name="a4_chk_e">Caves</string>
+    <string name="a4_correct">Sea, Alps, Caves</string>
     <string name="q5">5. How much forests does Slovenia have?</string>
     <string name="a5_radio_a">10 %</string>
     <string name="a5_radio_b">30 %</string>
@@ -36,13 +37,14 @@
     <string name="a6_radio_b">Summer (too hot to work), Autumn, Winter (no snow), Spring</string>
     <string name="a6_radio_c">Summer (lets find a shadow hot), Autumn, Winter (with snow), Spring</string>
     <string name="a6_radio_d">Winter all year</string>
-    <string name="q7">7. What dishes do you definetly want to try in Slovenia?</string>
+    <string name="q7">7. What dishes do you definitely want to try in Slovenia?</string>
     <string name="a7_chk_a">Potica</string>
     <string name="a7_chk_b">Pizza</string>
     <string name="a7_chk_c">Cepelinai</string>
     <string name="a7_chk_d">Žlinkrofi</string>
     <string name="a7_chk_e">Carniolan Sausage</string>
     <string name="a7_chk_f">Borscht</string>
+    <string name="a7_correct">Potica, Žlinkrofi, Carniolan Sausage</string>
 
     <!-- from .java file, displayed text -->
     <string name="score">SCORE: </string>
