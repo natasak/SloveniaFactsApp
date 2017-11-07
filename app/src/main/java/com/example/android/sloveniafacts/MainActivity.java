@@ -21,30 +21,76 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int result = 0;
+    private RatingBar simpleRatingBar;
+    private RadioButton asiaRadioButton, europeRadioButton, samericaRadioButton, mil2RadioButton, mil5RadioButton,
+            mil10RadioButton, forest10RadioButton, forest30RadioButton, forest60RadioButton, forest80RadioButton,
+            summerRadioButton, seasonsHotRadioButton, seasonsNormalRadioButton, winterRadioButton;
+    private EditText capitalText;
+    private CheckBox seaCheckbox, desertCheckbox, alpsCheckbox, cavesCheckbox, jungleCheckbox, poticaCheckbox,
+            pizzaCheckbox, cepelinaiCheckbox, zlinkrofiCheckbox, sausageCheckbox, borschtCheckbox;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //initialize all the view variables here:
+        // initialize rating bar view
+        simpleRatingBar = (RatingBar) findViewById(R.id.rating_bar);
+
+        // initialize radio buttons for question 1
+        asiaRadioButton = (RadioButton) findViewById(R.id.asia_radio_button);
+        europeRadioButton = (RadioButton) findViewById(R.id.europe_radio_button);
+        samericaRadioButton = (RadioButton) findViewById(R.id.south_america_radio_button);
+
+        // initialize EditText view for input of the capital, question 2
+        capitalText = (EditText) findViewById(R.id.capital_name_field);
+
+        // initialize radio buttons for question 3
+        mil2RadioButton = (RadioButton) findViewById(R.id.mio2_radio_button);
+        mil5RadioButton = (RadioButton) findViewById(R.id.mio5_radio_button);
+        mil10RadioButton = (RadioButton) findViewById(R.id.mio10_radio_button);
+
+        // initialize checkbox buttons for question 4
+        seaCheckbox = (CheckBox) findViewById(R.id.sea_checkbox);
+        desertCheckbox = (CheckBox) findViewById(R.id.desert_checkbox);
+        alpsCheckbox = (CheckBox) findViewById(R.id.alps_checkbox);
+        cavesCheckbox = (CheckBox) findViewById(R.id.caves_checkbox);
+        jungleCheckbox = (CheckBox) findViewById(R.id.jungle_checkbox);
+
+        // initialize radio buttons for question 5
+        forest10RadioButton = (RadioButton) findViewById(R.id.forest10_radio_button);
+        forest30RadioButton = (RadioButton) findViewById(R.id.forest30_radio_button);
+        forest60RadioButton = (RadioButton) findViewById(R.id.forest60_radio_button);
+        forest80RadioButton = (RadioButton) findViewById(R.id.forest80_radio_button);
+
+        // initialize radio buttons for question 6
+        summerRadioButton = (RadioButton) findViewById(R.id.summer_radio_button);
+        seasonsHotRadioButton = (RadioButton) findViewById(R.id.seasons_hot_radio_button);
+        seasonsNormalRadioButton = (RadioButton) findViewById(R.id.seasons_normal_radio_button);
+        winterRadioButton = (RadioButton) findViewById(R.id.winter_radio_button);
+
+        // initialize checkbox buttons for question 7
+        poticaCheckbox = (CheckBox) findViewById(R.id.potica_checkbox);
+        pizzaCheckbox = (CheckBox) findViewById(R.id.pizza_checkbox);
+        cepelinaiCheckbox = (CheckBox) findViewById(R.id.cepelinai_checkbox);
+        zlinkrofiCheckbox = (CheckBox) findViewById(R.id.zlinkrofi_checkbox);
+        sausageCheckbox = (CheckBox) findViewById(R.id.carniolan_sausage_checkbox);
+        borschtCheckbox = (CheckBox) findViewById(R.id.borscht_checkbox);
     }
 
     /**
      * RADIO BUTTON:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 1.
      */
     public void onRadioButtonContinent() {
-        // Is the button "Asia" selected?
-        RadioButton asiaRadioButton = (RadioButton) findViewById(R.id.asia_radio_button);
+        // Which button is selected
         boolean isAsia = asiaRadioButton.isChecked();
-
-        // Is the button "Europe" selected?
-        RadioButton europeRadioButton = (RadioButton) findViewById(R.id.europe_radio_button);
         boolean isEurope = europeRadioButton.isChecked();
-
-        // Is the button "South America" selected?
-        RadioButton samericaRadioButton = (RadioButton) findViewById(R.id.south_america_radio_button);
         boolean isSouthAmerica = samericaRadioButton.isChecked();
 
+        //if the right button is selected (Europe), increase result for 1
         if (isEurope) {
             result += 1;
         }
@@ -52,35 +98,29 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * INPUT CAPITAL:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 2.
      */
     public void inputCapital() {
         // added input Capital
-        EditText capitalText = (EditText) findViewById(R.id.capital_name_field);
         String capital = capitalText.getText().toString();
 
-        if (capital.equals("Ljubljana")) {
+        // if the input is "Ljubljana" then increase result for 1
+        if (capital.equals(getString(R.string.a2_ljubljana))) {
             result += 1;
         }
     }
 
     /**
      * RADIO BUTTON:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 3.
      */
     public void onRadioButtonPopulation() {
-        // Is the button "2 million" selected?
-        RadioButton mil2RadioButton = (RadioButton) findViewById(R.id.mio2_radio_button);
+        // Which button is selected?
         boolean is2mio = mil2RadioButton.isChecked();
-
-        // Is the button "5 million" selected?
-        RadioButton mil5RadioButton = (RadioButton) findViewById(R.id.mio5_radio_button);
         boolean is5mio = mil5RadioButton.isChecked();
-
-        // Is the button "10 million" selected?
-        RadioButton mil10RadioButton = (RadioButton) findViewById(R.id.mio10_radio_button);
         boolean is10mio = mil10RadioButton.isChecked();
 
+        //if the right button is selected (2m), increase result for 1
         if (is2mio) {
             result += 1;
         }
@@ -88,29 +128,17 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * CHECKBOX:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 4.
      */
     public void onCheckBoxLandscape() {
-        // Is the button "sea" selected?
-        CheckBox seaCheckbox = (CheckBox) findViewById(R.id.sea_checkbox);
+        // Which buttons are selected?
         boolean isSea = seaCheckbox.isChecked();
-
-        // Is the button "desert" selected?
-        CheckBox desertCheckbox = (CheckBox) findViewById(R.id.desert_checkbox);
         boolean isDesert = desertCheckbox.isChecked();
-
-        // Is the button "alps" selected?
-        CheckBox alpsCheckbox = (CheckBox) findViewById(R.id.alps_checkbox);
         boolean isAlps = alpsCheckbox.isChecked();
-
-        // Is the button "jungle" selected?
-        CheckBox jungleCheckbox = (CheckBox) findViewById(R.id.jungle_checkbox);
         boolean isJungle = jungleCheckbox.isChecked();
-
-        // Is the button "caves" selected?
-        CheckBox cavesCheckbox = (CheckBox) findViewById(R.id.caves_checkbox);
         boolean isCaves = cavesCheckbox.isChecked();
 
+        //if the right buttons are selected (sea, alps, caves), increase result for 1
         if (isSea && isAlps && isCaves && !isDesert && !isJungle) {
             result += 1;
         }
@@ -118,25 +146,16 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * RADIO BUTTON:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 5.
      */
     public void onRadioButtonForest() {
-        // Is the button "10 %" selected?
-        RadioButton forest10RadioButton = (RadioButton) findViewById(R.id.forest10_radio_button);
+        // Which button is selected?
         boolean isForest10 = forest10RadioButton.isChecked();
-
-        // Is the button "30 %" selected?
-        RadioButton forest30RadioButton = (RadioButton) findViewById(R.id.forest30_radio_button);
         boolean isForest30 = forest30RadioButton.isChecked();
-
-        // Is the button "60 %" selected?
-        RadioButton forest60RadioButton = (RadioButton) findViewById(R.id.forest60_radio_button);
         boolean isForest60 = forest60RadioButton.isChecked();
-
-        // Is the button "80 %" selected?
-        RadioButton forest80RadioButton = (RadioButton) findViewById(R.id.forest80_radio_button);
         boolean isForest80 = forest80RadioButton.isChecked();
 
+        //if the right button is selected (60 %), increase result for 1
         if (isForest60) {
             result += 1;
         }
@@ -144,25 +163,16 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * RADIO BUTTON:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 6.
      */
     public void onRadioButtonSeasons() {
-        // Is the button "Summer all year" selected?
-        RadioButton summerRadioButton = (RadioButton) findViewById(R.id.summer_radio_button);
+        // Which button is selected?
         boolean isSummer = summerRadioButton.isChecked();
-
-        // Is the button "All seasons, hot" selected?
-        RadioButton seasonsHotRadioButton = (RadioButton) findViewById(R.id.seasons_hot_radio_button);
         boolean isSeasonsHot = seasonsHotRadioButton.isChecked();
-
-        // Is the button "All seasons, normal" selected?
-        RadioButton seasonsNormalRadioButton = (RadioButton) findViewById(R.id.seasons_normal_radio_button);
         boolean isSeasonsNormal = seasonsNormalRadioButton.isChecked();
-
-        // Is the button "Winter all year" selected?
-        RadioButton winterRadioButton = (RadioButton) findViewById(R.id.winter_radio_button);
         boolean isWinter = winterRadioButton.isChecked();
 
+        //if the right button is selected (seasons normal), increase result for 1
         if (isSeasonsNormal) {
             result += 1;
         }
@@ -170,40 +180,25 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * CHECKBOX:
-     * This method is called when the results button is clicked. It checks the right result.
+     * This method is called when the results button is clicked. It checks the right result for question 7.
      */
     public void onCheckBoxFood() {
-        // Is the button "potica" selected?
-        CheckBox poticaCheckbox = (CheckBox) findViewById(R.id.potica_checkbox);
+        // Which buttons are selected?
         boolean isPotica = poticaCheckbox.isChecked();
-
-        // Is the button "pizza" selected?
-        CheckBox pizzaCheckbox = (CheckBox) findViewById(R.id.pizza_checkbox);
         boolean isPizza = pizzaCheckbox.isChecked();
-
-        // Is the button "cepelinai" selected?
-        CheckBox cepelinaiCheckbox = (CheckBox) findViewById(R.id.cepelinai_checkbox);
         boolean isCepelinai = cepelinaiCheckbox.isChecked();
-
-        // Is the button "zlinkrofi" selected?
-        CheckBox zlinkrofiCheckbox = (CheckBox) findViewById(R.id.zlinkrofi_checkbox);
         boolean isZlinkrofi = zlinkrofiCheckbox.isChecked();
-
-        // Is the button "carniolan sausage" selected?
-        CheckBox sausageCheckbox = (CheckBox) findViewById(R.id.carniolan_sausage_checkbox);
         boolean isSausage = sausageCheckbox.isChecked();
-
-        // Is the button "borscht" selected?
-        CheckBox borschtCheckbox = (CheckBox) findViewById(R.id.borscht_checkbox);
         boolean isBorscht = borschtCheckbox.isChecked();
 
+        //if the right buttons are selected (potica, zlinkrofi, sausage), increase result for 1
         if (isPotica && isZlinkrofi && isSausage && !isPizza && !isCepelinai && !isBorscht) {
             result += 1;
         }
     }
 
     /**
-     * This method is called when the "results" button is clicked.
+     * This method is called when the "results" button is clicked. Displays a toast with results.
      */
     public void seeResults(View view) {
         //call all methods and update result
@@ -235,17 +230,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Method for displaying the answers.
+     * Method for displaying the answers. POPRAVI STRINGE!!!
      */
     public String createAnswers() {
         String answers = getString(R.string.answersHeader);
-        answers += "\n" + "1. Europe";
-        answers += "\n" + "2. Ljubljana";
-        answers += "\n" + "3. 2 million";
-        answers += "\n" + "4. Sea, Alps, Caves";
-        answers += "\n" + "5. 60 %";
-        answers += "\n" + "6. Summer (lets find a shadow hot), Autumn, Winter (with snow), Spring";
-        answers += "\n" + "7. Potica, Žlinkrofi, Carniolan Sausage";
+        answers += "\n" + "1. " + getString(R.string.a1_radio_b);
+        answers += "\n" + "2. " + getString(R.string.a2_ljubljana);
+        answers += "\n" + "3. " + getString(R.string.a3_radio_a_correct);
+        answers += "\n" + "4. " + getString(R.string.a4_chk_a) + getString(R.string.a4_chk_c) + getString(R.string.a4_chk_e);
+        answers += "\n" + "5. " + getString(R.string.a5_radio_c);
+        answers += "\n" + "6. " + getString(R.string.a6_radio_c);
+        // Potica, Žlinkrofi, Carniolan Sausage
+        answers += "\n" + "7. " + getString(R.string.a7_chk_a) + getString(R.string.a7_chk_d) + getString(R.string.a7_chk_e);
         answers += "\n";
         if (rate() > 4) {
             answers += "\n" + getString(R.string.ratedText) + rate() + getString(R.string.ratedHigh);
@@ -275,12 +271,8 @@ public class MainActivity extends AppCompatActivity {
      * Method for selecting the number of stars - RatingBar.
      */
     public int rate() {
-        // initiate rating bar
-        RatingBar simpleRatingBar = (RatingBar) findViewById(R.id.rating_bar);
-
         // get values
-        int rating = (int)simpleRatingBar.getRating();
-        return rating;
+        return (int)simpleRatingBar.getRating();
     }
 
 

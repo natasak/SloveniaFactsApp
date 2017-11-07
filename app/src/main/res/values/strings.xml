@@ -14,8 +14,10 @@
     <string name="a1_radio_c">South America</string>
     <string name="q2">2. Name the Slovenia\'s Capital.</string>
     <string name="a2_input_capital">Write the Capital</string>
+    <string name="a2_ljubljana">Ljubljana</string>
     <string name="q3">3. How big is the population (in million)?</string>
     <string name="a3_radio_a">2m</string>
+    <string name="a3_radio_a_correct">2 million</string>
     <string name="a3_radio_b">5m</string>
     <string name="a3_radio_c">10m</string>
     <string name="q4">4. What do you find in Slovenia? Select all that apply.</string>
