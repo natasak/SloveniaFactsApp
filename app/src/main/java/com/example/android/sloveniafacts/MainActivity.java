@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Method for displaying the answers. POPRAVI STRINGE!!!
+     * Method for displaying the answers.
      */
     public String createAnswers() {
         String answers = getString(R.string.answersHeader);
